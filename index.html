@@ -196,10 +196,44 @@
     <p>Analyzing the length of top songs across the decades, 1960s-2020s.</p>
   </header>
 
+  <!-- ── Visual divider ── -->
+  <div style="margin:0 0 36px 0;overflow:hidden">
+    <!-- Decade timeline bar -->
+    <div style="display:flex;align-items:center;gap:0;margin-bottom:10px">
+      <div style="flex:1;height:3px;background:#C17FF8"></div>
+      <div style="flex:1;height:3px;background:#F59B42"></div>
+      <div style="flex:1;height:3px;background:#F1476F"></div>
+      <div style="flex:1;height:3px;background:#E8D44D"></div>
+      <div style="flex:1;height:3px;background:#4DC9E8"></div>
+      <div style="flex:1;height:3px;background:#1DB954"></div>
+      <div style="flex:1;height:3px;background:#FFFFFF"></div>
+    </div>
+    <!-- Decade labels -->
+    <div style="display:flex;gap:0">
+      <div style="flex:1;font-size:10px;font-weight:700;color:#C17FF8;letter-spacing:0.04em">1960s</div>
+      <div style="flex:1;font-size:10px;font-weight:700;color:#F59B42;letter-spacing:0.04em">1970s</div>
+      <div style="flex:1;font-size:10px;font-weight:700;color:#F1476F;letter-spacing:0.04em">1980s</div>
+      <div style="flex:1;font-size:10px;font-weight:700;color:#E8D44D;letter-spacing:0.04em">1990s</div>
+      <div style="flex:1;font-size:10px;font-weight:700;color:#4DC9E8;letter-spacing:0.04em">2000s</div>
+      <div style="flex:1;font-size:10px;font-weight:700;color:#1DB954;letter-spacing:0.04em">2010s</div>
+      <div style="flex:1;font-size:10px;font-weight:700;color:#FFFFFF;letter-spacing:0.04em">2020s</div>
+    </div>
+    <!-- Mean values -->
+    <div style="display:flex;gap:0;margin-top:4px">
+      <div style="flex:1;font-size:10px;color:var(--white);font-family:'DM Mono',monospace">2:49</div>
+      <div style="flex:1;font-size:10px;color:var(--white);font-family:'DM Mono',monospace">3:52</div>
+      <div style="flex:1;font-size:10px;color:var(--white);font-family:'DM Mono',monospace">4:11</div>
+      <div style="flex:1;font-size:10px;color:var(--white);font-family:'DM Mono',monospace">4:28</div>
+      <div style="flex:1;font-size:10px;color:var(--white);font-family:'DM Mono',monospace">4:01</div>
+      <div style="flex:1;font-size:10px;color:var(--white);font-family:'DM Mono',monospace">3:41</div>
+      <div style="flex:1;font-size:10px;color:var(--white);font-family:'DM Mono',monospace">3:17</div>
+    </div>
+  </div>
+
   <!-- ── Introduction ── -->
   <div class="section-label">Introduction</div>
   <div class="info-box" style="margin-bottom:14px">
-    <p>Have you ever noticed that songs just feel shorter lately? As a music lover who has noticed this trend I wondered if that was actually measurable, and if the differences in duration were statistically significant. To do this, I built an interactive tool that models the distribution of Billboard Hot 100 song lengths across seven decades, from the 1960s to today, using normal distributions fitted to real data. The results turned out a lot more fascinating than I could imagine. The curves tell a story of how culture, technology, and money shaped music.</p>
+    <p>Have you ever noticed that songs just feel shorter lately? As a music lover who has noticed this trend I wondered if that was actually measurable, and if the differences in duration were statistically significant.  To do this, I built an interactive tool that models the distribution of Billboard Hot 100 song lengths across seven decades, from the 1960s to today, using normal distributions fitted to real data. The results turned out a lot more fascinating than I could imagine. The curves tell a story of how culture, technology, and money shaped music.</p>
   </div>
 
   <!-- ── Background (dropdown) ── -->
@@ -214,31 +248,23 @@
       <ul class="era-list">
         <li class="era-item">
           <span class="era-decade">1960s</span>
-          <span class="era-text">Radio stations needed to fit songs between ad breaks and news segments, which created a soft ceiling of around three minutes. A few artists — the Beatles being the most famous example — pushed back against that, with Hey Jude clocking in at 7:08.</span>
+          <span class="era-text">In the 1960s, that was the radio. Stations needed to fit songs between ad breaks and news segments, which created a soft ceiling of around three minutes. A few artists (the Beatles being the most famous example) pushed back against that.</span>
         </li>
         <li class="era-item">
           <span class="era-decade">1970s</span>
-          <span class="era-text">More artists began exploring song duration. The experimentation of the 60s had proven audiences would follow. FM radio cared less about strict time limits, and fans didn't mind the extra length — they bought the records and sang along anyway.</span>
-        </li>
-        <li class="era-item">
-          <span class="era-decade">1980s</span>
-          <span class="era-text">CDs began replacing vinyl. While vinyl had a hard physical limit on how much audio you could press onto a side, CDs did not. The 1980s has the widest standard deviation of any decade in my dataset — the most variety. You had 9 to 5 by Dolly Parton at 2:42 sitting in the same era as Money for Nothing by Dire Straits at 8:16.</span>
+          <span class="era-text">More artists began exploring song duration in the 1970s and 80s. CDs began replacing vinyl. While vinyl had a hard physical limit on how much audio you could press onto a side. CDs did not. The 1980s has the widest standard deviation of any decade in my dataset, meaning the most variety. You had 9 to 5 by Dolly Parton at 2:42 in the same decade as Money for Nothing by Dire Straits at 8:16.</span>
         </li>
         <li class="era-item">
           <span class="era-decade">1990s</span>
-          <span class="era-text">Peak creative freedom. Past the days of vinyl constraints and before the days of streaming pressure. The average song length peaked at 4:28 — R&B, hip-hop, and rock all rewarded extended arrangements.</span>
-        </li>
-        <li class="era-item">
-          <span class="era-decade">2000s</span>
-          <span class="era-text">iTunes changed the equation. Suddenly every song was priced individually, which nudged labels toward albums with more tracks and shorter individual songs. The distribution tightened noticeably.</span>
+          <span class="era-text">The 1990s were peak creative freedom. Past the days of constraints from vinyl and before the days of constraint from streaming. The average song length peaked at 4:28.</span>
         </li>
         <li class="era-item">
           <span class="era-decade">2010s</span>
-          <span class="era-text">Spotify flipped the incentive structure completely. Artists earn royalties only when a listener stays past 30 seconds, which pushed intros to disappear and hooks to arrive immediately. More plays equals more revenue, so shorter songs meant more loops which meant more money. The 2010s mean dropped to 3:41 and the standard deviation narrowed — the industry was converging on a formula.</span>
+          <span class="era-text">The 2010s brought Spotify, and the incentive structure flipped completely. Artists earn royalties only when a listener stays past 30 seconds, which pushed intros to disappear and hooks to arrive immediately. More plays equals more revenue, so shorter songs meant more loops which meant more money. The data shows this clearly. The 2010s mean dropped to 3:41 and the standard deviation narrowed, meaning the industry was converging on a formula.</span>
         </li>
         <li class="era-item">
           <span class="era-decade">2020s</span>
-          <span class="era-text">TikTok and virality dominate. A 15-second clip needs to hook someone instantly. The average is now 3:17, the tightest distribution in the dataset. As attention spans for entertainment shorten, combined with the economic incentive structure for artists, the music industry has converged on a generally tight song length.</span>
+          <span class="era-text">Today, in the 2020s, the biggest influence on song length is TikTok and virality. A 15-second clip needs to hook someone instantly. The average is now 3:17, the tightest distribution in the dataset, and songs like Old Town Road (1:53) chart at #1 for 19 weeks. As individuals are beginning to have a shorter attention span for entertainment, combined with the economic incentive structure for artists, the music industry has converged on a generally tight song length.</span>
         </li>
       </ul>
     </div>
@@ -247,8 +273,7 @@
   <!-- ── Dataset ── -->
   <div class="section-label">Dataset</div>
   <div class="info-box" style="margin-bottom:32px">
-    <p>I used Billboard Hot 100 historical chart data (Kaggle, dhruvildave, 1958–2021) to identify the top 10 songs per year. Song names and artists came from that dataset. I then sourced each song's actual duration manually from Spotify and Wikipedia (with help from Claude to do it fast) since the Kaggle dataset does not include durations. For 2022–2025, I used Billboard's published year-end top 10 lists via Wikipedia.</p>
-    <p>The final dataset is <strong>660 songs across 7 decades</strong>: 100 per decade for the 1960s through 2010s, and 60 for the 2020s (2020–2025). All μ and σ values in this project are computed directly from those 660 real durations.</p>
+    <p>I used Billboard Hot 100 historical chart data (Kaggle, dhruvildave, 1958–2021) to identify the top 10 songs per year. Song names and artists came from that dataset. I then sourced each song's actual duration manually from Spotify and Wikipedia (with help from Claude to do it fast) since the Kaggle dataset does not include durations. For 2022–2025, I used Billboard's published year-end top 10 lists via Wikipedia. The final dataset is 660 songs across 7 decades: 100 per decade for the 1960s through 2010s, and 60 for the 2020s (2020–2025). All μ and σ values in this project are computed directly from those 660 real durations.</p>
   </div>
 
   <!-- ── Demo section ── -->
@@ -373,26 +398,21 @@
   <div class="section-label">Methods</div>
   <div class="info-box" style="margin-bottom:14px">
     <p>I used two concepts from CS109.</p>
-    <p>The first is the <strong>normal distribution</strong>. Song length is the result of many independent choices: how many verses, how long the chorus runs, whether there is a bridge, how long the outro lasts, etc. By the <strong>Central Limit Theorem</strong>, when you sum many independent random variables, the result converges to a normal distribution regardless of what those individual variables look like. This is why N(μ, σ²) is a natural fit for song lengths. I compute μ and σ directly from the raw durations using the sample mean and sample standard deviation formulas.</p>
-    <p>The second tool is <strong>bootstrapping</strong>. Once I had a distribution per decade, I wanted to ask: are two decades actually different, or could the gap in their means just be due to chance? I used a bootstrap p-value test to answer this. The method combines two decade samples (which you can choose on the Bootstrap p-value tab above) into one pool, treats that pool as the best estimate of the null distribution (where both decades come from the same population), then resamples from it 3,000 times. Each resample computes the difference in means between two random groups. The p-value is the fraction of resamples where that difference is at least as large as the observed difference. The interactive tool lets you compare any two decades and run the bootstrap yourself. You can watch the null distribution of differences build up in real time and see exactly where the observed gap sits relative to what chance would produce.</p>
+    <p>The first is the normal distribution. Song length is the result of many independent choices: how many verses, how long the chorus runs, whether there is a bridge, how long the outro lasts, etc. By the Central Limit Theorem, when you sum many independent random variables, the result converges to a normal distribution regardless of what those individual variables look like. This is why N(μ, σ²) is a natural fit for song lengths. I compute μ and σ directly from the raw durations using the sample mean and sample standard deviation formulas.</p>
+    <p>The second tool is bootstrapping. Once I had a distribution per decade, I wanted to ask: are two decades actually different, or could the gap in their means just be due to chance? I used a bootstrap p-value test to answer this. The method combines two decade samples (which you can choose on the 'bootstrap p-value' tab of the demo)  into one pool, treats that pool as the best estimate of the null distribution (where both decades come from the same population), then resamples from it 3,000 times. Each resample computes the difference in means between two random groups. The p-value is the fraction of resamples where that difference is at least as large as the observed difference. The interactive tool lets you compare any two decades and run the bootstrap yourself. You can watch the null distribution of differences build up in real time and see exactly where the observed gap sits relative to what chance would produce.</p>
   </div>
 
   <!-- ── Results ── -->
   <div class="section-label">Results</div>
   <div class="info-box" style="margin-bottom:14px">
-    <p>The normal distributions over the decades align with the background story. The curves shift right from the 1960s through the 1990s, then drift back left through the 2010s and 2020s. The 2020s curve is the narrowest of any decade, which means there is less variance — the industry has stopped experimenting and started optimizing.</p>
-    <p>The bootstrap test shows just how significant these results are. Comparing the 1990s (μ = 4:28) to the 2020s (μ = 3:17): the observed difference is 1:11. In 3,000 bootstrap resamples under the null hypothesis, fewer than 0.1% produced a difference that large. The p-value is &lt; 0.001. This is not sampling noise — it is a real shift.</p>
+    <p>The normal distributions over the decades align with the background story. The curves shift right from the 1960s through the 1990s, then drift back left through the 2010s and 2020s. The 2020s curve is the narrowest of any decade, which means there is less variance.</p>
+    <p>The bootstrap test shows just how significant these results are. Comparing the 1990s (μ = 4:28) to the 2020s (μ = 3:17): the observed difference is 1:11. In 3,000 bootstrap resamples under the null hypothesis, fewer than 0.1% produced a difference that large. The p-value is &lt; 0.001.</p>
   </div>
 
   <!-- ── Limitations ── -->
   <div class="section-label">Limitations</div>
   <div class="info-box" style="margin-bottom:14px">
-    <p>There are a few important limitations to this project.</p>
-    <ol>
-      <li>The normal distribution is an approximation. Song lengths cannot go below zero, which means the true distribution is slightly right-skewed. A log-normal would technically fit better, but I chose the normal because it is easier to interpret and connects directly to the CLT argument.</li>
-      <li>This dataset only captures the most popular songs. With thousands of songs released per year, the mean and standard deviation may be drastically different if all songs, regardless of success, were included.</li>
-      <li>The independence assumption underlying the CLT argument is not necessarily perfect. For example, a song with a longer verse tends to have a longer chorus, so the decisions are not completely independent.</li>
-    </ol>
+    <p>There are a few big limitations to this project. First, the normal distribution is an approximation. Song lengths cannot go below zero, which means the true distribution is slightly right-skewed. A log-normal would technically fit better, but I chose the normal because it is easier to interpret. Second, this dataset only captures the most popular songs. With thousands of songs coming out per year, the mean and standard deviation may be drastically different if all songs, regardless of success, were included. Third, the independence assumption underlying the CLT argument is not necessarily perfect. For example, a song with a longer verse tends to have a longer chorus, so they are not completely independent. </p>
   </div>
 
   <!-- ── Future Work ── -->
@@ -404,7 +424,7 @@
   <!-- ── Use of Generative AI ── -->
   <div class="section-label">Use of Generative AI</div>
   <div class="info-box" style="margin-bottom:14px">
-    <p>For this project, most of my use of generative AI was for actually designing the demo. I found the dataset, did the calculations and applied the CS109 concepts, did the writeup, analyzed results, and came up with the demo idea on my own. Claude helped me with sourcing the song durations so that it wouldn't take too much time to do manually, and to design the HTML/CSS for the demonstration based on the data I gave it, since my HTML/CSS abilities are not that strong, and I had a very specific vision for what I wanted my demo to look like.</p>
+    <p>For this project, most of my use of generative AI was for actually designing the demo. I found the dataset, did the calculations and applied the CS109 concepts, did the writeup, analyzed results, and came up with the demo idea on my own. Claude helped me with sourcing the song durations so that it wouldn't take too much time to do manually, and to design the HTML/CSS for the demonstration based on the data I gave it, since my HTML/CSS abilities are not that strong, and I had a very specific vision for what I wanted my demo to look like. </p>
   </div>
 
   <!-- ── Citations ── -->
